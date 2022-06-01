@@ -4,8 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../src/styles/main.css">
   <title>Document</title>
 </head>
 <body>
+  <div class="app-container">
+    <div class="title">
+      <h1>To Do List</h1>
+      <i class="bi bi-arrow-repeat"></i>
+    </div>
+    <div class="list">
+      <div class="add-item">
+        <ul>
+          <li>
+            <form class="form">
+              <input type="text" placeholder="Add to your list...">
+              <i class="bi bi-arrow-90deg-down"></i>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="list-items">
+        <ul>
+          <li class="item-container">
+            <form>
+              <input type="checkbox" name="item-1" id="item-1">
+              <label for="item-1">Thing to do!</label>
+            </form>
+            <i class="bi bi-three-dots-vertical"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="clear-btn">
+        <button>Clear all completed</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

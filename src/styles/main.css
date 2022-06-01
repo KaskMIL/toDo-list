@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(255, 132, 0);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-color: white;
+  width: 500px;
+  box-shadow: 1px 3px 15px 0px rgba(0,0,0,0.75);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  color: rgb(144, 144, 144);
+  border-bottom: 0.2rem rgb(231, 231, 231) solid;
+}
+
+.title h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.title i {
+  font-size: 2.5rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 0.2rem rgb(231, 231, 231) solid;
+  align-items: center;
+}
+
+.form i {
+  font-size: 2rem;
+  color: rgb(144, 144, 144);
+}
+
+.form input {
+  border: none;
+  font-size: 1.6rem;
+  width: 100%;
+  font-weight: 300;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 0.2rem rgb(231, 231, 231) solid;
+}
+
+.item-container form {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1rem;
+}
+
+.item-container form label {
+  font-weight: 300;
+}
+
+.item-container i {
+  font-size: 2rem;
+  color: rgb(144, 144, 144);
+}
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.clear-btn button {
+  border: none;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: rgb(144, 144, 144);
+}
