@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(0.5);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;;;EAGE,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,SAAS;EACT,UAAU;EACV,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,iCAAiC;AACnC;;AAEA;EACE,gBAAgB;EAChB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,uBAAuB;EACvB,8CAA8C;EAC9C,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,yBAAyB;EACzB,8CAA8C;AAChD;;AAEA;EACE,SAAS;EACT,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;EAC9C,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;AAChD;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,SAAS;AACX;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,uBAAuB;EACvB,iCAAiC;EACjC,iBAAiB;EACjB,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,eAAe;AACjB;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');\n\nhtml {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(0.5);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;;;EAGE,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,SAAS;EACT,UAAU;EACV,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,iCAAiC;AACnC;;AAEA;EACE,gBAAgB;EAChB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,uBAAuB;EACvB,8CAA8C;EAC9C,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,yBAAyB;EACzB,8CAA8C;AAChD;;AAEA;EACE,SAAS;EACT,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;EAC9C,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;AAChD;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,SAAS;AACX;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,uBAAuB;EACvB,iCAAiC;EACjC,iBAAiB;EACjB,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,eAAe;AACjB;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');\n\nhtml {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -614,7 +614,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 
 
-//DOM variables
+// DOM variables
 const listContainer = document.getElementById('list-container');
 
 const toDoList = [
@@ -640,41 +640,40 @@ const toDoList = [
   },
 ];
 
-//Function to create li element
+// Function to create li element
 function createLi(task) {
-  //Declare variables
+  // Declare variables
   const li = document.createElement('li');
   const form = document.createElement('form');
   const input = document.createElement('input');
   const label = document.createElement('label');
   const icon = document.createElement('i');
-  //Set classes and id
+  // Set classes and id
   li.classList.add('item-container');
-  input.setAttribute('type','checkbox');
+  input.setAttribute('type', 'checkbox');
   input.setAttribute('name', `itme${task.index}`);
-  input.setAttribute('id', `itme${task.index}`)
-  label.setAttribute('for',`item${task.index}`);
-  label.classList.add
-  icon.classList.add('bi','bi-three-dots-vertical','move');
-  //set value
+  input.setAttribute('id', `itme${task.index}`);
+  label.setAttribute('for', `item${task.index}`);
+  icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
+  // set value
   input.checked = task.completed;
   label.innerHTML = task.description;
-  //Create elment
+  // Create elment
   form.appendChild(input);
   form.appendChild(label);
   li.appendChild(form);
   li.appendChild(icon);
-  //Check completed
-  if(input.checked) {
+  // Check completed
+  if (input.checked) {
     label.classList.add('done');
   }
 
   return li;
 }
 
-//Function to assign element and push on DOM
+// Function to assign element and push on DOM
 function setElement(node, list) {
-  list.forEach(element => {
+  list.forEach((element) => {
     const li = createLi(element);
     node.appendChild(li);
   });
@@ -682,17 +681,15 @@ function setElement(node, list) {
 
 setElement(listContainer, toDoList);
 
-listContainer.addEventListener('click', e => {
-  if(e.target.nodeName === 'INPUT') {
-    const nextSibling = e.target.nextSibling;
-    if(e.target.checked) {
-      nextSibling.classList.add('done');
-    }
-    else {
-      nextSibling.classList.remove('done');
+listContainer.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'INPUT') {
+    if (e.target.checked) {
+      e.target.nextSibling.classList.add('done');
+    } else {
+      e.target.nextSibling.classList.remove('done');
     }
   }
-})
+});
 })();
 
 /******/ })()
