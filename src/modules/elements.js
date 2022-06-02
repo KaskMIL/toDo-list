@@ -53,3 +53,12 @@ export function removeFromList(nodeId, list) {
   const newList = list.filter((element) => element.index !== parseInt(nodeId));
   return newList;
 }
+
+// Function to update index
+export function updateIndex(list) {
+  let counter = 1;
+  list.forEach(task => {
+    task.index = counter;
+    counter++;
+  });
+}

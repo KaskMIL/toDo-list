@@ -1,6 +1,6 @@
 import './styles/main.css';
 import Task from './modules/task.js';
-import { setElement as setElement, getIndex as getIndex, removeFromDom, removeFromList } from './modules/elements.js';
+import { setElement as setElement, getIndex as getIndex, removeFromDom, removeFromList, updateIndex } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage';
 
@@ -57,6 +57,7 @@ listContainer.addEventListener('click', (e) => {
     if (e.target.parentNode.firstChild.firstChild.checked) {
       removeFromDom(e.target.parentNode);
       toDoList = [...removeFromList(e.target.parentNode.id, toDoList)];
+      updateIndex(toDoList);
       storeData(toDoList);
       console.log(toDoList)
     }
