@@ -30,15 +30,16 @@ ul {
 
 .app-container {
   background-color: white;
-  width: 500px;
-  box-shadow: 1px 3px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+  width: 50%;
 }
 
 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
   color: rgb(144, 144, 144);
   border-bottom: 0.2rem rgb(231, 231, 231) solid;
 }
@@ -55,7 +56,7 @@ ul {
 .form {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
   border-bottom: 0.2rem rgb(231, 231, 231) solid;
   align-items: center;
 }
@@ -76,7 +77,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-bottom: 0.2rem rgb(231, 231, 231) solid;
 }
 
@@ -100,7 +101,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 
 .clear-btn button {
@@ -110,4 +111,26 @@ ul {
   font-size: 1.6rem;
   font-weight: 300;
   color: rgb(144, 144, 144);
+}
+
+.clear-btn button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.move {
+  cursor: move;
+}
+
+.pointer {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.pointer:hover {
+  transform: scale(1.2);
 }
