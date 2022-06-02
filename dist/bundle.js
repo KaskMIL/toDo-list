@@ -529,6 +529,89 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/modules/elements.js":
+/*!*********************************!*\
+  !*** ./src/modules/elements.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getIndex": () => (/* binding */ getIndex),
+/* harmony export */   "setElement": () => (/* binding */ setElement)
+/* harmony export */ });
+/* harmony import */ var _task_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task.js */ "./src/modules/task.js");
+
+
+// Function to create li element
+function createLi(task) {
+  // Declare variables
+  const li = document.createElement('li');
+  const form = document.createElement('form');
+  const input = document.createElement('input');
+  const label = document.createElement('label');
+  const icon = document.createElement('i');
+  // Set classes and id
+  li.classList.add('item-container');
+  li.setAttribute('id', task.index);
+  input.setAttribute('type', 'checkbox');
+  input.setAttribute('name', `itme${task.index}`);
+  input.setAttribute('id', `itme${task.index}`);
+  label.setAttribute('for', `item${task.index}`);
+  icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
+  // set value
+  input.checked = task.completed;
+  label.innerHTML = task.description;
+  // Create elment
+  form.appendChild(input);
+  form.appendChild(label);
+  li.appendChild(form);
+  li.appendChild(icon);
+  // Check completed
+  if (input.checked) {
+    label.classList.add('done');
+  }
+
+  return li;
+};
+
+function getIndex(list) {
+  const index = list.length === 0 ? 1 : list.length + 1;
+  return index;
+}
+
+// Function to assign element and push on DOM
+function setElement(node, task) {
+  const li = createLi(task);
+  node.appendChild(li);
+}
+
+/***/ }),
+
+/***/ "./src/modules/task.js":
+/*!*****************************!*\
+  !*** ./src/modules/task.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Task)
+/* harmony export */ });
+class Task {
+  constructor(description, completed, index) {
+    this.description = description;
+    this.completed = completed;
+    this.index = index;
+  };
+
+  addTask(list) {
+    list.push(this);
+  }
+};
+
 /***/ })
 
 /******/ 	});
@@ -612,74 +695,19 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _modules_task_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/task.js */ "./src/modules/task.js");
+/* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/elements.js */ "./src/modules/elements.js");
+
+
 
 
 // DOM variables
 const listContainer = document.getElementById('list-container');
+const inputTask = document.getElementById('task-input');
+const addBtn = document.getElementById('add-btn');
 
-const toDoList = [
-  {
-    description: 'Clean beadroom',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Wash clothe',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Do the dishes',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Mow the lawn',
-    completed: false,
-    index: 1,
-  },
-];
-
-// Function to create li element
-function createLi(task) {
-  // Declare variables
-  const li = document.createElement('li');
-  const form = document.createElement('form');
-  const input = document.createElement('input');
-  const label = document.createElement('label');
-  const icon = document.createElement('i');
-  // Set classes and id
-  li.classList.add('item-container');
-  input.setAttribute('type', 'checkbox');
-  input.setAttribute('name', `itme${task.index}`);
-  input.setAttribute('id', `itme${task.index}`);
-  label.setAttribute('for', `item${task.index}`);
-  icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
-  // set value
-  input.checked = task.completed;
-  label.innerHTML = task.description;
-  // Create elment
-  form.appendChild(input);
-  form.appendChild(label);
-  li.appendChild(form);
-  li.appendChild(icon);
-  // Check completed
-  if (input.checked) {
-    label.classList.add('done');
-  }
-
-  return li;
-}
-
-// Function to assign element and push on DOM
-function setElement(node, list) {
-  list.forEach((element) => {
-    const li = createLi(element);
-    node.appendChild(li);
-  });
-}
-
-setElement(listContainer, toDoList);
+// Task List
+const toDoList = [];
 
 listContainer.addEventListener('click', (e) => {
   if (e.target.nodeName === 'INPUT') {
@@ -690,6 +718,33 @@ listContainer.addEventListener('click', (e) => {
     }
   }
 });
+
+inputTask.addEventListener('keypress', e => {
+  if(e.key === 'Enter') {
+    e.preventDefault();
+    if(inputTask.value){
+      const task = new _modules_task_js__WEBPACK_IMPORTED_MODULE_1__["default"](inputTask.value, false, (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.getIndex)(toDoList));
+      task.addTask(toDoList);
+      (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.setElement)(listContainer, task);
+      console.log(toDoList)
+    }
+    inputTask.value = ''
+  }
+})
+
+addBtn.addEventListener('click', (e) => {
+  if(inputTask.value) {
+    const task = new _modules_task_js__WEBPACK_IMPORTED_MODULE_1__["default"](inputTask.value, false, (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.getIndex)(toDoList));
+    task.addTask(toDoList);
+    (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.setElement)(listContainer, task);
+  }
+  inputTask.value = '';
+})
+
+
+
+// console.log(typeof parseInt(e.target.parentNode.parentNode.id));
+// console.log('task1'.slice(4))
 })();
 
 /******/ })()

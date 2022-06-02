@@ -1,3 +1,5 @@
+import Task from './task.js';
+
 // Function to create li element
 function createLi(task) {
   // Declare variables
@@ -8,6 +10,7 @@ function createLi(task) {
   const icon = document.createElement('i');
   // Set classes and id
   li.classList.add('item-container');
+  li.setAttribute('id', task.index);
   input.setAttribute('type', 'checkbox');
   input.setAttribute('name', `itme${task.index}`);
   input.setAttribute('id', `itme${task.index}`);
@@ -27,12 +30,15 @@ function createLi(task) {
   }
 
   return li;
+};
+
+export function getIndex(list) {
+  const index = list.length === 0 ? 1 : list.length + 1;
+  return index;
 }
 
 // Function to assign element and push on DOM
-export function setElement(node, list) {
-  list.forEach((element) => {
-    const li = createLi(element);
-    node.appendChild(li);
-  });
+export function setElement(node, task) {
+  const li = createLi(task);
+  node.appendChild(li);
 }

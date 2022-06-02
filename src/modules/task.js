@@ -4,4 +4,8 @@ export default class Task {
     this.completed = completed;
     this.index = index;
   };
+
+  addTask(list) {
+    list.push(this);
+  }
 };

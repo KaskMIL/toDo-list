@@ -1,34 +1,14 @@
 import './styles/main.css';
-import Book from './modules/task.js';
-import { setElement as setElement} from './modules/elements.js';
+import Task from './modules/task.js';
+import { setElement as setElement, getIndex as getIndex} from './modules/elements.js';
 
 // DOM variables
 const listContainer = document.getElementById('list-container');
+const inputTask = document.getElementById('task-input');
+const addBtn = document.getElementById('add-btn');
 
-const toDoList = [
-  {
-    description: 'Clean beadroom',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Wash clothe',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Do the dishes',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Mow the lawn',
-    completed: false,
-    index: 1,
-  },
-];
-
-setElement(listContainer, toDoList);
+// Task List
+const toDoList = [];
 
 listContainer.addEventListener('click', (e) => {
   if (e.target.nodeName === 'INPUT') {
@@ -39,3 +19,30 @@ listContainer.addEventListener('click', (e) => {
     }
   }
 });
+
+inputTask.addEventListener('keypress', e => {
+  if(e.key === 'Enter') {
+    e.preventDefault();
+    if(inputTask.value){
+      const task = new Task(inputTask.value, false, getIndex(toDoList));
+      task.addTask(toDoList);
+      setElement(listContainer, task);
+      console.log(toDoList)
+    }
+    inputTask.value = ''
+  }
+})
+
+addBtn.addEventListener('click', (e) => {
+  if(inputTask.value) {
+    const task = new Task(inputTask.value, false, getIndex(toDoList));
+    task.addTask(toDoList);
+    setElement(listContainer, task);
+  }
+  inputTask.value = '';
+})
+
+
+
+// console.log(typeof parseInt(e.target.parentNode.parentNode.id));
+// console.log('task1'.slice(4))
