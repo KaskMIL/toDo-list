@@ -1,5 +1,3 @@
-import Task from './task.js';
-
 // Function to create li element
 function createLi(task) {
   // Declare variables
@@ -32,6 +30,7 @@ function createLi(task) {
   return li;
 };
 
+// Function to get an index to assign to object
 export function getIndex(list) {
   const index = list.length === 0 ? 1 : list.length + 1;
   return index;
@@ -41,4 +40,13 @@ export function getIndex(list) {
 export function setElement(node, task) {
   const li = createLi(task);
   node.appendChild(li);
+}
+
+// Function to remove element from DOM
+export const removeFromDom = (node) => node.remove();
+
+// Function to remove from list
+export function removeFromList(nodeId, list) {
+  const newList = list.filter((element) => element.index !== parseInt(nodeId));
+  return newList;
 }
