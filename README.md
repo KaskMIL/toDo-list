@@ -1,56 +1,32 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> Description the project.
+> The project consist in a To do list web app. The user can load tasks to the list, move the position of the tasks, mark it as complete and clean the list using the clean button.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML CSS Javascript
+- Linters and Webpack
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+Coming soon...
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+You can download the main code and run it locally
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Tom Milanesi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@TomMilanesi](https://github.com/KaskMIL)
+- Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
+- LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
 ## 🤝 Contributing
 
@@ -62,11 +38,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
