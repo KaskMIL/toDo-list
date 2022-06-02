@@ -31,7 +31,7 @@ function createLi(task) {
   }
 
   return li;
-};
+}
 
 // Function to get an index to assign to object
 export function getIndex(list) {
@@ -50,15 +50,15 @@ export const removeFromDom = (node) => node.remove();
 
 // Function to remove from list
 export function removeFromList(nodeId, list) {
-  const newList = list.filter((element) => element.index !== parseInt(nodeId));
+  const newList = list.filter((element) => element.index !== parseInt(nodeId, 10));
   return newList;
 }
 
 // Function to update index
 export function updateIndex(list) {
   let counter = 1;
-  list.forEach(task => {
+  list.forEach((task) => {
     task.index = counter;
-    counter++;
+    counter += 1;
   });
 }
