@@ -4,27 +4,30 @@ function createLi(task) {
   const li = document.createElement('li');
   const form = document.createElement('form');
   const input = document.createElement('input');
-  const label = document.createElement('label');
+  const textIn = document.createElement('input');
   const icon = document.createElement('i');
   // Set classes and id
   li.classList.add('item-container');
   li.setAttribute('id', task.index);
   input.setAttribute('type', 'checkbox');
+  input.classList.add('checkbox');
   input.setAttribute('name', `itme${task.index}`);
   input.setAttribute('id', `itme${task.index}`);
-  label.setAttribute('for', `item${task.index}`);
+  textIn.setAttribute('for', `item${task.index}`);
+  textIn.setAttribute('type', 'text');
+  textIn.classList.add('text-in');
   icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
   // set value
   input.checked = task.completed;
-  label.innerHTML = task.description;
+  textIn.value = task.description;
   // Create elment
   form.appendChild(input);
-  form.appendChild(label);
+  form.appendChild(textIn);
   li.appendChild(form);
   li.appendChild(icon);
   // Check completed
   if (input.checked) {
-    label.classList.add('done');
+    textIn.classList.add('done');
   }
 
   return li;

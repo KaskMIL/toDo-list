@@ -1,6 +1,6 @@
 import './styles/main.css';
 import Task from './modules/task.js';
-import { setElement as setElement, getIndex as getIndex, removeFromDom, removeFromList} from './modules/elements.js';
+import { setElement as setElement, getIndex as getIndex, removeFromDom, removeFromList } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage';
 
@@ -15,21 +15,41 @@ let toDoList = [];
 // Load data from local storage
 window.addEventListener('load', () => {
   toDoList = [...loadData(listContainer)];
+  console.log(toDoList)
 })
 
 // Event to checkbox
 listContainer.addEventListener('click', (e) => {
-  if (e.target.nodeName === 'INPUT') {
+  if (e.target.nodeName === 'INPUT'&& e.target.classList.contains('checkbox')) {
     if (e.target.checked) {
       e.target.nextSibling.classList.add('done');
-      toTrash(e.target.parentNode.nextSibling)
+      toDoList[parseInt(e.target.parentNode.parentNode.id) - 1].completed = true;
+      toTrash(e.target.parentNode.nextSibling);
+      storeData(toDoList)
       console.log(toDoList)
     } else {
       e.target.nextSibling.classList.remove('done');
+      toDoList[parseInt(e.target.parentNode.parentNode.id) - 1].completed = false;
       toDots(e.target.parentNode.nextSibling)
+      storeData(toDoList)
     }
   }
 });
+
+// Event to editing task
+listContainer.addEventListener('dblclick', (e) => {
+  if (e.target.nodeName === 'INPUT' && e.target.classList.contains('text-in')) {
+    console.log(parseInt(e.target.parentNode.parentNode.id))
+    e.target.addEventListener('keypress', (e) => {
+      if(e.key == 'Enter') {
+        e.preventDefault();
+        toDoList[parseInt(e.target.parentNode.parentNode.id) - 1].description = e.target.value;
+        storeData(toDoList);
+        console.log(toDoList)
+      }
+    })
+  }
+})
 
 // Event to delete elements
 listContainer.addEventListener('click', (e) => {
@@ -69,6 +89,8 @@ addBtn.addEventListener('click', (e) => {
   inputTask.value = '';
 })
 
+const arr = ['si', 'no', 'izq'];
+//console.log(updateTask(2,toDoList,'cuatro'))
 
 
 // console.log(typeof parseInt(e.target.parentNode.parentNode.id)); ACCES TO LI

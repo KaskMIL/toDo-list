@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;;;EAGE,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,SAAS;EACT,UAAU;EACV,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,iCAAiC;AACnC;;AAEA;EACE,gBAAgB;EAChB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,uBAAuB;EACvB,8CAA8C;EAC9C,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,yBAAyB;EACzB,8CAA8C;AAChD;;AAEA;EACE,SAAS;EACT,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;EAC9C,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;AAChD;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,SAAS;AACX;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,uBAAuB;EACvB,iCAAiC;EACjC,iBAAiB;EACjB,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,eAAe;AACjB;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');\n\nhtml {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n}\n\n.item-container form label {\n  font-weight: 300;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n  width: 50%;\n}\n\n.item-container form .text-in {\n  font-weight: 300;\n  border: none;\n  width: 100%;\n  font-size: 1.6rem;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,sBAAsB;EACtB,gBAAgB;AAClB;;AAEA;;;EAGE,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,SAAS;EACT,UAAU;EACV,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,iCAAiC;AACnC;;AAEA;EACE,gBAAgB;EAChB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,uBAAuB;EACvB,8CAA8C;EAC9C,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,yBAAyB;EACzB,8CAA8C;AAChD;;AAEA;EACE,SAAS;EACT,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;EAC9C,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,kBAAkB;EAClB,8CAA8C;AAChD;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,WAAW;EACX,iBAAiB;AACnB;;AAEA;EACE,eAAe;EACf,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,uBAAuB;EACvB,iCAAiC;EACjC,iBAAiB;EACjB,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,eAAe;AACjB;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');\n\nhtml {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: rgb(255, 132, 0);\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  font-family: 'Roboto', sans-serif;\n}\n\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.app-container {\n  background-color: white;\n  box-shadow: 1px 3px 15px 0 rgba(0, 0, 0, 0.75);\n  border-radius: 1rem;\n  width: 50%;\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  color: rgb(144, 144, 144);\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.title h1 {\n  margin: 0;\n  font-weight: 700;\n}\n\n.title i {\n  font-size: 2.5rem;\n}\n\n.form {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n  align-items: center;\n}\n\n.form i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.form input {\n  border: none;\n  font-size: 1.6rem;\n  width: 100%;\n  font-weight: 300;\n}\n\n.item-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n  border-bottom: 0.2rem rgb(231, 231, 231) solid;\n}\n\n.item-container form {\n  display: flex;\n  align-items: center;\n  font-size: 1.6rem;\n  gap: 1rem;\n  width: 50%;\n}\n\n.item-container form .text-in {\n  font-weight: 300;\n  border: none;\n  width: 100%;\n  font-size: 1.6rem;\n}\n\n.item-container i {\n  font-size: 2rem;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2rem 0;\n}\n\n.clear-btn button {\n  border: none;\n  background-color: white;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.6rem;\n  font-weight: 300;\n  color: rgb(144, 144, 144);\n}\n\n.clear-btn button:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.done {\n  text-decoration: line-through;\n}\n\n.move {\n  cursor: move;\n}\n\n.pointer {\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.pointer:hover {\n  transform: scale(1.2);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -540,18 +540,17 @@ module.exports = styleTagTransform;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getIndex": () => (/* binding */ getIndex),
+/* harmony export */   "removeFromDom": () => (/* binding */ removeFromDom),
+/* harmony export */   "removeFromList": () => (/* binding */ removeFromList),
 /* harmony export */   "setElement": () => (/* binding */ setElement)
 /* harmony export */ });
-/* harmony import */ var _task_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task.js */ "./src/modules/task.js");
-
-
 // Function to create li element
 function createLi(task) {
   // Declare variables
   const li = document.createElement('li');
   const form = document.createElement('form');
   const input = document.createElement('input');
-  const label = document.createElement('label');
+  const textIn = document.createElement('input');
   const icon = document.createElement('i');
   // Set classes and id
   li.classList.add('item-container');
@@ -559,24 +558,27 @@ function createLi(task) {
   input.setAttribute('type', 'checkbox');
   input.setAttribute('name', `itme${task.index}`);
   input.setAttribute('id', `itme${task.index}`);
-  label.setAttribute('for', `item${task.index}`);
+  textIn.setAttribute('for', `item${task.index}`);
+  textIn.setAttribute('type', 'text');
+  textIn.classList.add('text-in');
   icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
   // set value
   input.checked = task.completed;
-  label.innerHTML = task.description;
+  textIn.value = task.description;
   // Create elment
-  form.appendChild(input);
+  form.appendChild(textIn);
   form.appendChild(label);
   li.appendChild(form);
   li.appendChild(icon);
   // Check completed
   if (input.checked) {
-    label.classList.add('done');
+    textIn.classList.add('done');
   }
 
   return li;
 };
 
+// Function to get an index to assign to object
 function getIndex(list) {
   const index = list.length === 0 ? 1 : list.length + 1;
   return index;
@@ -586,6 +588,70 @@ function getIndex(list) {
 function setElement(node, task) {
   const li = createLi(task);
   node.appendChild(li);
+}
+
+// Function to remove element from DOM
+const removeFromDom = (node) => node.remove();
+
+// Function to remove from list
+function removeFromList(nodeId, list) {
+  const newList = list.filter((element) => element.index !== parseInt(nodeId));
+  return newList;
+}
+
+/***/ }),
+
+/***/ "./src/modules/localStorage.js":
+/*!*************************************!*\
+  !*** ./src/modules/localStorage.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadData": () => (/* binding */ loadData),
+/* harmony export */   "storeData": () => (/* binding */ storeData)
+/* harmony export */ });
+/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements.js */ "./src/modules/elements.js");
+
+
+// Function to set local storage
+const storeData = list => localStorage.setItem('tasks', JSON.stringify(list));
+
+// Function to load local storage
+function loadData(nodeContainer) {
+  const taskList = JSON.parse(localStorage.getItem('tasks'));
+  if(taskList) {
+    taskList.forEach(task => {
+      (0,_elements_js__WEBPACK_IMPORTED_MODULE_0__.setElement)(nodeContainer,task)
+    });
+  }
+  return taskList;
+};
+
+/***/ }),
+
+/***/ "./src/modules/style.js":
+/*!******************************!*\
+  !*** ./src/modules/style.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toDots": () => (/* binding */ toDots),
+/* harmony export */   "toTrash": () => (/* binding */ toTrash)
+/* harmony export */ });
+// Function to change dots for trash bin
+function toTrash(node) {
+  node.classList.remove('bi-three-dots-vertical','move');
+  node.classList.add('bi-trash','pointer');
+}
+
+// Function to change trash bin for dots
+function toDots(node) {
+  node.classList.add('bi-three-dots-vertical','move');
+  node.classList.remove('bi-trash','pointer');
 }
 
 /***/ }),
@@ -697,6 +763,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _modules_task_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/task.js */ "./src/modules/task.js");
 /* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/elements.js */ "./src/modules/elements.js");
+/* harmony import */ var _modules_style_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/style.js */ "./src/modules/style.js");
+/* harmony import */ var _modules_localStorage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/localStorage */ "./src/modules/localStorage.js");
+
+
 
 
 
@@ -707,18 +777,47 @@ const inputTask = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
 
 // Task List
-const toDoList = [];
+let toDoList = [];
 
+// Load data from local storage
+window.addEventListener('load', () => {
+  toDoList = [...(0,_modules_localStorage__WEBPACK_IMPORTED_MODULE_4__.loadData)(listContainer)];
+})
+
+// Event to checkbox
 listContainer.addEventListener('click', (e) => {
   if (e.target.nodeName === 'INPUT') {
     if (e.target.checked) {
       e.target.nextSibling.classList.add('done');
+      (0,_modules_style_js__WEBPACK_IMPORTED_MODULE_3__.toTrash)(e.target.parentNode.nextSibling)
+      console.log(toDoList)
     } else {
       e.target.nextSibling.classList.remove('done');
+      (0,_modules_style_js__WEBPACK_IMPORTED_MODULE_3__.toDots)(e.target.parentNode.nextSibling)
     }
   }
 });
 
+// Event to editing task
+listContainer.addEventListener('dblclick', (e) => {
+  if (e.target.nodeName === 'LABEL') {
+    console.log(e.target.parentNode)
+  }
+})
+
+// Event to delete elements
+listContainer.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'I') {
+    if (e.target.parentNode.firstChild.firstChild.checked) {
+      (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.removeFromDom)(e.target.parentNode);
+      toDoList = [...(0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.removeFromList)(e.target.parentNode.id, toDoList)];
+      (0,_modules_localStorage__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
+      console.log(toDoList)
+    }
+  }
+})
+
+// Event to add task with enter key
 inputTask.addEventListener('keypress', e => {
   if(e.key === 'Enter') {
     e.preventDefault();
@@ -726,25 +825,30 @@ inputTask.addEventListener('keypress', e => {
       const task = new _modules_task_js__WEBPACK_IMPORTED_MODULE_1__["default"](inputTask.value, false, (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.getIndex)(toDoList));
       task.addTask(toDoList);
       (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.setElement)(listContainer, task);
+      (0,_modules_localStorage__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
       console.log(toDoList)
     }
     inputTask.value = ''
   }
 })
 
+// Event to add task with add button
 addBtn.addEventListener('click', (e) => {
   if(inputTask.value) {
     const task = new _modules_task_js__WEBPACK_IMPORTED_MODULE_1__["default"](inputTask.value, false, (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.getIndex)(toDoList));
     task.addTask(toDoList);
     (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.setElement)(listContainer, task);
+    (0,_modules_localStorage__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
   }
   inputTask.value = '';
 })
 
 
 
-// console.log(typeof parseInt(e.target.parentNode.parentNode.id));
-// console.log('task1'.slice(4))
+// console.log(typeof parseInt(e.target.parentNode.parentNode.id)); ACCES TO LI
+// console.log('task1'.slice(4)) GET JUST THE NUMBER ID
+// console.log(e.target.parentNode.nextSibling) GET THE 3 DOTS SVG
+// console.log(e.target.parentNode.firstChild.firstChild.checked) access to checkbox from icon
 })();
 
 /******/ })()
