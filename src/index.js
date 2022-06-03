@@ -5,7 +5,7 @@ import {
 } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage.js';
-import { clearDom, clearList } from './modules/clear';
+import { clearDom, clearList } from './modules/clear.js';
 
 // DOM variables
 const listContainer = document.getElementById('list-container');
@@ -96,4 +96,4 @@ clearBtn.addEventListener('click', () => {
   updateIndex(toDoList);
   updateElementId();
   storeData(toDoList);
-})
+});

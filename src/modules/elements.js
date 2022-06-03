@@ -67,8 +67,8 @@ export function updateIndex(list) {
 export function updateElementId() {
   const liList = document.querySelectorAll('.item-container');
   let counter = 1;
-  liList.forEach(element => {
+  liList.forEach((element) => {
     element.id = counter;
     counter += 1;
-  })
+  });
 }
