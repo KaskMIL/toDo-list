@@ -531,6 +531,32 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/modules/clear.js":
+/*!******************************!*\
+  !*** ./src/modules/clear.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clearDom": () => (/* binding */ clearDom)
+/* harmony export */ });
+//Function to clear DOM
+function clearDom(list) {
+  const liList = document.querySelectorAll('.item-container');
+  list.forEach(task => {
+    if(!task.completed) {
+      liList.forEach(element => {
+        if(task.index === parseInt(element.id)) {
+          element.remove();
+        }
+      })
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/modules/elements.js":
 /*!*********************************!*\
   !*** ./src/modules/elements.js ***!
@@ -543,6 +569,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "removeFromDom": () => (/* binding */ removeFromDom),
 /* harmony export */   "removeFromList": () => (/* binding */ removeFromList),
 /* harmony export */   "setElement": () => (/* binding */ setElement),
+/* harmony export */   "updateElementId": () => (/* binding */ updateElementId),
 /* harmony export */   "updateIndex": () => (/* binding */ updateIndex)
 /* harmony export */ });
 // Function to create li element
@@ -608,6 +635,16 @@ function updateIndex(list) {
     task.index = counter;
     counter += 1;
   });
+}
+
+// Funtion to update element index
+function updateElementId() {
+  const liList = document.querySelectorAll('.item-container');
+  let counter = 1;
+  liList.forEach(element => {
+    element.id = counter;
+    counter += 1;
+  })
 }
 
 /***/ }),
@@ -776,6 +813,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/elements.js */ "./src/modules/elements.js");
 /* harmony import */ var _modules_style_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/style.js */ "./src/modules/style.js");
 /* harmony import */ var _modules_localStorage_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/localStorage.js */ "./src/modules/localStorage.js");
+/* harmony import */ var _modules_clear__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/clear */ "./src/modules/clear.js");
+
 
 
 
@@ -832,6 +871,7 @@ listContainer.addEventListener('click', (e) => {
       (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.removeFromDom)(e.target.parentNode);
       toDoList = [...(0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.removeFromList)(e.target.parentNode.id, toDoList)];
       (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.updateIndex)(toDoList);
+      (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.updateElementId)();
       (0,_modules_localStorage_js__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
     }
   }
