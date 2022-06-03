@@ -1,78 +1,87 @@
 import './styles/main.css';
+import Task from './modules/task.js';
+import {
+  setElement, getIndex, removeFromDom, removeFromList, updateIndex,
+} from './modules/elements.js';
+import { toDots, toTrash } from './modules/style.js';
+import { storeData, loadData } from './modules/localStorage.js';
 
 // DOM variables
 const listContainer = document.getElementById('list-container');
+const inputTask = document.getElementById('task-input');
+const addBtn = document.getElementById('add-btn');
 
-const toDoList = [
-  {
-    description: 'Clean beadroom',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Wash clothe',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Do the dishes',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Mow the lawn',
-    completed: false,
-    index: 1,
-  },
-];
+// Task List
+let toDoList = [];
 
-// Function to create li element
-function createLi(task) {
-  // Declare variables
-  const li = document.createElement('li');
-  const form = document.createElement('form');
-  const input = document.createElement('input');
-  const label = document.createElement('label');
-  const icon = document.createElement('i');
-  // Set classes and id
-  li.classList.add('item-container');
-  input.setAttribute('type', 'checkbox');
-  input.setAttribute('name', `itme${task.index}`);
-  input.setAttribute('id', `itme${task.index}`);
-  label.setAttribute('for', `item${task.index}`);
-  icon.classList.add('bi', 'bi-three-dots-vertical', 'move');
-  // set value
-  input.checked = task.completed;
-  label.innerHTML = task.description;
-  // Create elment
-  form.appendChild(input);
-  form.appendChild(label);
-  li.appendChild(form);
-  li.appendChild(icon);
-  // Check completed
-  if (input.checked) {
-    label.classList.add('done');
-  }
+// Load data from local storage
+window.addEventListener('load', () => {
+  toDoList = [...loadData(listContainer)];
+});
 
-  return li;
-}
-
-// Function to assign element and push on DOM
-function setElement(node, list) {
-  list.forEach((element) => {
-    const li = createLi(element);
-    node.appendChild(li);
-  });
-}
-
-setElement(listContainer, toDoList);
-
+// Event to checkbox
 listContainer.addEventListener('click', (e) => {
-  if (e.target.nodeName === 'INPUT') {
+  if (e.target.nodeName === 'INPUT' && e.target.classList.contains('checkbox')) {
     if (e.target.checked) {
       e.target.nextSibling.classList.add('done');
+      toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = true;
+      toTrash(e.target.parentNode.nextSibling);
+      storeData(toDoList);
     } else {
       e.target.nextSibling.classList.remove('done');
+      toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = false;
+      toDots(e.target.parentNode.nextSibling);
+      storeData(toDoList);
     }
   }
+});
+
+// Event to editing task
+listContainer.addEventListener('dblclick', (e) => {
+  if (e.target.nodeName === 'INPUT' && e.target.classList.contains('text-in')) {
+    e.target.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].description = e.target.value;
+        storeData(toDoList);
+      }
+    });
+  }
+});
+
+// Event to delete elements
+listContainer.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'I') {
+    if (e.target.parentNode.firstChild.firstChild.checked) {
+      removeFromDom(e.target.parentNode);
+      toDoList = [...removeFromList(e.target.parentNode.id, toDoList)];
+      updateIndex(toDoList);
+      storeData(toDoList);
+    }
+  }
+});
+
+// Event to add task with enter key
+inputTask.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    if (inputTask.value) {
+      const task = new Task(inputTask.value, false, getIndex(toDoList));
+      task.addTask(toDoList);
+      setElement(listContainer, task);
+      storeData(toDoList);
+    }
+    inputTask.value = '';
+  }
+});
+
+// Event to add task with add button
+addBtn.addEventListener('click', () => {
+  if (inputTask.value) {
+    const task = new Task(inputTask.value, false, getIndex(toDoList));
+    task.addTask(toDoList);
+    setElement(listContainer, task);
+    storeData(toDoList);
+  }
+  inputTask.value = '';
 });

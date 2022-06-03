@@ -17,7 +17,24 @@ Coming soon...
 
 ## Getting Started
 
-You can download the main code and run it locally
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+    NodeJS
+
+### Setup
+
+    1. git clone https://github.com/KaskMIL/toDo-list.git
+    2. cd Todo_list
+
+### Install
+
+    npm install
+
+### Usage
+
+    npm run dev
 
 
 ## Authors

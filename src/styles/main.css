@@ -86,10 +86,14 @@ ul {
   align-items: center;
   font-size: 1.6rem;
   gap: 1rem;
+  width: 50%;
 }
 
-.item-container form label {
+.item-container form .text-in {
   font-weight: 300;
+  border: none;
+  width: 100%;
+  font-size: 1.6rem;
 }
 
 .item-container i {
@@ -120,6 +124,7 @@ ul {
 
 .done {
   text-decoration: line-through;
+  color: rgb(144, 144, 144);
 }
 
 .move {
