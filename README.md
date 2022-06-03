@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-Coming soon...
+[Live Demo](https://kaskmil.github.io/toDo-list/)
 
 
 ## Getting Started
