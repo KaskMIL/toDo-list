@@ -1,15 +1,17 @@
 import './styles/main.css';
 import Task from './modules/task.js';
 import {
-  setElement, getIndex, removeFromDom, removeFromList, updateIndex,
+  setElement, getIndex, removeFromDom, removeFromList, updateIndex, updateElementId,
 } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage.js';
+import { clearDom, clearList } from './modules/clear.js';
 
 // DOM variables
 const listContainer = document.getElementById('list-container');
 const inputTask = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
+const clearBtn = document.getElementById('clear-btn');
 
 // Task List
 let toDoList = [];
@@ -56,6 +58,7 @@ listContainer.addEventListener('click', (e) => {
       removeFromDom(e.target.parentNode);
       toDoList = [...removeFromList(e.target.parentNode.id, toDoList)];
       updateIndex(toDoList);
+      updateElementId();
       storeData(toDoList);
     }
   }
@@ -84,4 +87,13 @@ addBtn.addEventListener('click', () => {
     storeData(toDoList);
   }
   inputTask.value = '';
+});
+
+// Event to clear DOM
+clearBtn.addEventListener('click', () => {
+  clearDom(toDoList);
+  toDoList = [...clearList(toDoList)];
+  updateIndex(toDoList);
+  updateElementId();
+  storeData(toDoList);
 });

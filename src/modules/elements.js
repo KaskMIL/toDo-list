@@ -62,3 +62,13 @@ export function updateIndex(list) {
     counter += 1;
   });
 }
+
+// Funtion to update element index
+export function updateElementId() {
+  const liList = document.querySelectorAll('.item-container');
+  let counter = 1;
+  liList.forEach((element) => {
+    element.id = counter;
+    counter += 1;
+  });
+}

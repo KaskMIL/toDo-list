@@ -10,9 +10,7 @@
 - HTML CSS Javascript
 - Linters and Webpack
 
-## Live Demo
-
-Coming soon...
+## [Live Demo](https://kaskmil.github.io/toDo-list/)
 
 
 ## Getting Started
