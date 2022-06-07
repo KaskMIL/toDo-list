@@ -539,20 +539,27 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "clearDom": () => (/* binding */ clearDom)
+/* harmony export */   "clearDom": () => (/* binding */ clearDom),
+/* harmony export */   "clearList": () => (/* binding */ clearList)
 /* harmony export */ });
-//Function to clear DOM
+// Function to clear DOM
 function clearDom(list) {
   const liList = document.querySelectorAll('.item-container');
-  list.forEach(task => {
-    if(!task.completed) {
-      liList.forEach(element => {
-        if(task.index === parseInt(element.id)) {
+  list.forEach((task) => {
+    if (task.completed) {
+      liList.forEach((element) => {
+        if (task.index === parseInt(element.id, 10)) {
           element.remove();
         }
-      })
+      });
     }
   });
+}
+
+// Function to clear list
+function clearList(list) {
+  const newList = list.filter((element) => !element.completed);
+  return newList;
 }
 
 /***/ }),
@@ -641,10 +648,10 @@ function updateIndex(list) {
 function updateElementId() {
   const liList = document.querySelectorAll('.item-container');
   let counter = 1;
-  liList.forEach(element => {
+  liList.forEach((element) => {
     element.id = counter;
     counter += 1;
-  })
+  });
 }
 
 /***/ }),
@@ -813,7 +820,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/elements.js */ "./src/modules/elements.js");
 /* harmony import */ var _modules_style_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/style.js */ "./src/modules/style.js");
 /* harmony import */ var _modules_localStorage_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/localStorage.js */ "./src/modules/localStorage.js");
-/* harmony import */ var _modules_clear__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/clear */ "./src/modules/clear.js");
+/* harmony import */ var _modules_clear_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/clear.js */ "./src/modules/clear.js");
 
 
 
@@ -825,6 +832,7 @@ __webpack_require__.r(__webpack_exports__);
 const listContainer = document.getElementById('list-container');
 const inputTask = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
+const clearBtn = document.getElementById('clear-btn');
 
 // Task List
 let toDoList = [];
@@ -900,6 +908,15 @@ addBtn.addEventListener('click', () => {
     (0,_modules_localStorage_js__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
   }
   inputTask.value = '';
+});
+
+// Event to clear DOM
+clearBtn.addEventListener('click', () => {
+  (0,_modules_clear_js__WEBPACK_IMPORTED_MODULE_5__.clearDom)(toDoList);
+  toDoList = [...(0,_modules_clear_js__WEBPACK_IMPORTED_MODULE_5__.clearList)(toDoList)];
+  (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.updateIndex)(toDoList);
+  (0,_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.updateElementId)();
+  (0,_modules_localStorage_js__WEBPACK_IMPORTED_MODULE_4__.storeData)(toDoList);
 });
 })();
 
