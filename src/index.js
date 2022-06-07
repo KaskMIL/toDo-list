@@ -12,13 +12,15 @@ const listContainer = document.getElementById('list-container');
 const inputTask = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
 const clearBtn = document.getElementById('clear-btn');
+const elemClass = 'item-container';
+const storeName = 'tasks';
 
 // Task List
 let toDoList = [];
 
 // Load data from local storage
 window.addEventListener('load', () => {
-  toDoList = [...loadData(listContainer)];
+  toDoList = [...loadData(listContainer, storeName)];
 });
 
 // Event to checkbox
@@ -28,12 +30,12 @@ listContainer.addEventListener('click', (e) => {
       e.target.nextSibling.classList.add('done');
       toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = true;
       toTrash(e.target.parentNode.nextSibling);
-      storeData(toDoList);
+      storeData(toDoList, storeName);
     } else {
       e.target.nextSibling.classList.remove('done');
       toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = false;
       toDots(e.target.parentNode.nextSibling);
-      storeData(toDoList);
+      storeData(toDoList, storeName);
     }
   }
 });
@@ -45,7 +47,7 @@ listContainer.addEventListener('dblclick', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
         toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].description = e.target.value;
-        storeData(toDoList);
+        storeData(toDoList, storeName);
       }
     });
   }
@@ -58,8 +60,8 @@ listContainer.addEventListener('click', (e) => {
       removeFromDom(e.target.parentNode);
       toDoList = [...removeFromList(e.target.parentNode.id, toDoList)];
       updateIndex(toDoList);
-      updateElementId();
-      storeData(toDoList);
+      updateElementId(elemClass);
+      storeData(toDoList, storeName);
     }
   }
 });
@@ -72,7 +74,7 @@ inputTask.addEventListener('keypress', (e) => {
       const task = new Task(inputTask.value, false, getIndex(toDoList));
       task.addTask(toDoList);
       setElement(listContainer, task);
-      storeData(toDoList);
+      storeData(toDoList, storeName);
     }
     inputTask.value = '';
   }
@@ -84,16 +86,16 @@ addBtn.addEventListener('click', () => {
     const task = new Task(inputTask.value, false, getIndex(toDoList));
     task.addTask(toDoList);
     setElement(listContainer, task);
-    storeData(toDoList);
+    storeData(toDoList, storeName);
   }
   inputTask.value = '';
 });
 
 // Event to clear DOM
 clearBtn.addEventListener('click', () => {
-  clearDom(toDoList);
+  clearDom(toDoList, elemClass);
   toDoList = [...clearList(toDoList)];
   updateIndex(toDoList);
-  updateElementId();
-  storeData(toDoList);
+  updateElementId(elemClass);
+  storeData(toDoList, storeName);
 });

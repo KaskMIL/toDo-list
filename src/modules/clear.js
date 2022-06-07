@@ -1,6 +1,6 @@
 // Function to clear DOM
-export function clearDom(list) {
-  const liList = document.querySelectorAll('.item-container');
+export function clearDom(list, elemClass) {
+  const liList = document.querySelectorAll(`.${elemClass}`);
   list.forEach((task) => {
     if (task.completed) {
       liList.forEach((element) => {

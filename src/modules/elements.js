@@ -64,8 +64,8 @@ export function updateIndex(list) {
 }
 
 // Funtion to update element index
-export function updateElementId() {
-  const liList = document.querySelectorAll('.item-container');
+export function updateElementId(elemClass) {
+  const liList = document.querySelectorAll(`.${elemClass}`);
   let counter = 1;
   liList.forEach((element) => {
     element.id = counter;
