@@ -11,6 +11,10 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --grey-color: rgb(144, 144, 144);
+}
+
 body {
   background-color: rgb(255, 132, 0);
   margin: 0;
@@ -40,7 +44,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  color: rgb(144, 144, 144);
+  color: var(--grey-color);
   border-bottom: 0.2rem rgb(231, 231, 231) solid;
 }
 
@@ -63,7 +67,7 @@ ul {
 
 .form i {
   font-size: 2rem;
-  color: rgb(144, 144, 144);
+  color: var(--grey-color);
 }
 
 .form input {
@@ -98,7 +102,7 @@ ul {
 
 .item-container i {
   font-size: 2rem;
-  color: rgb(144, 144, 144);
+  color: var(--grey-color);
 }
 
 .clear-btn {
@@ -114,7 +118,7 @@ ul {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
-  color: rgb(144, 144, 144);
+  color: var(--grey-color);
 }
 
 .clear-btn button:hover {
@@ -124,7 +128,7 @@ ul {
 
 .done {
   text-decoration: line-through;
-  color: rgb(144, 144, 144);
+  color: var(--grey-color);
 }
 
 .move {
