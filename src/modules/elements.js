@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // Function to create li element
 function createLi(task) {
   // Declare variables
@@ -72,4 +74,4 @@ function updateElementId(elemClass) {
     counter += 1;
   });
 }
-module.exports = removeFromList
+module.exports = removeFromList;
