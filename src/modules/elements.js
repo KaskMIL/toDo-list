@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // Function to create li element
 function createLi(task) {
   // Declare variables
@@ -34,28 +36,28 @@ function createLi(task) {
 }
 
 // Function to get an index to assign to object
-export function getIndex(list) {
+function getIndex(list) {
   const index = list.length === 0 ? 1 : list.length + 1;
   return index;
 }
 
 // Function to assign element and push on DOM
-export function setElement(node, task) {
+function setElement(node, task) {
   const li = createLi(task);
   node.appendChild(li);
 }
 
 // Function to remove element from DOM
-export const removeFromDom = (node) => node.remove();
+const removeFromDom = (node) => node.remove();
 
 // Function to remove from list
-export function removeFromList(nodeId, list) {
+function removeFromList(nodeId, list) {
   const newList = list.filter((element) => element.index !== parseInt(nodeId, 10));
   return newList;
 }
 
 // Function to update index
-export function updateIndex(list) {
+function updateIndex(list) {
   let counter = 1;
   list.forEach((task) => {
     task.index = counter;
@@ -64,11 +66,12 @@ export function updateIndex(list) {
 }
 
 // Funtion to update element index
-export function updateElementId() {
-  const liList = document.querySelectorAll('.item-container');
+function updateElementId(elemClass) {
+  const liList = document.querySelectorAll(`.${elemClass}`);
   let counter = 1;
   liList.forEach((element) => {
     element.id = counter;
     counter += 1;
   });
 }
+module.exports = removeFromList;
