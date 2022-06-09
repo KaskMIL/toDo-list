@@ -19,11 +19,24 @@ describe('Edit test', () => {
   const inputEl = document.createElement('input');
   inputEl.value = 'Something';
   it('Edit Test #1', () => {
-    elements.editContent(toDolist,1,inputEl)
-    expect(toDolist[0]).toEqual({description: 'Something', completed: false, index: 1});
+    elements.editContent(toDolist, 1, inputEl)
+    expect(toDolist[0]).toEqual({ description: 'Something', completed: false, index: 1 });
   });
   it('Edit Test #2', () => {
     elements.editContent(toDolist, 2, inputEl)
-    expect(toDolist[1]).toEqual({description: 'Something', completed: false, index: 2});
+    expect(toDolist[1]).toEqual({ description: 'Something', completed: false, index: 2 });
+  })
+})
+
+describe('updating status test', () => {
+
+
+  it('Updating status #1', () => {
+    elements.updateStatus(toDolist, 1,)
+    expect(toDolist[0]).toEqual({ description: 'Something', completed: true, index: 1 });
+  });
+  it('updating status #2', () => {
+    elements.updateStatus(toDolist, 2,)
+    expect(toDolist[1]).toEqual({ description: 'Something', completed: true, index: 2 });
   })
 })
