@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Function to clear DOM
 function clearDom(list, elemClass) {
   const liList = document.querySelectorAll(`.${elemClass}`);

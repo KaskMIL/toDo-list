@@ -1,7 +1,8 @@
 import './styles/main.css';
 import Task from './modules/task.js';
 import {
-  setElement, getIndex, removeFromDom, removeFromList, updateIndex, updateElementId, updateStatus, editContent
+  setElement, getIndex, removeFromDom, removeFromList, updateIndex, updateElementId,
+  updateStatus, editContent,
 } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage.js';
@@ -28,12 +29,12 @@ listContainer.addEventListener('click', (e) => {
   if (e.target.nodeName === 'INPUT' && e.target.classList.contains('checkbox')) {
     if (e.target.checked) {
       e.target.nextSibling.classList.add('done');
-      updateStatus(toDoList, e.target.parentNode.parentNode.id)
+      updateStatus(toDoList, e.target.parentNode.parentNode.id);
       toTrash(e.target.parentNode.nextSibling);
       storeData(toDoList, storeName);
     } else {
       e.target.nextSibling.classList.remove('done');
-      updateStatus(toDoList, e.target.parentNode.parentNode.id)
+      updateStatus(toDoList, e.target.parentNode.parentNode.id);
       toDots(e.target.parentNode.nextSibling);
       storeData(toDoList, storeName);
     }
