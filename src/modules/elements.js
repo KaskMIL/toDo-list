@@ -74,4 +74,7 @@ function updateElementId(elemClass) {
     counter += 1;
   });
 }
+
+export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex};
+
 module.exports = removeFromList;
