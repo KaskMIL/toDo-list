@@ -46,7 +46,7 @@ listContainer.addEventListener('dblclick', (e) => {
     e.target.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        editContent(toDoList, e.target.parentNode.parentNode.id, e);
+        editContent(toDoList, e.target.parentNode.parentNode.id, e.target);
         storeData(toDoList, storeName);
       }
     });

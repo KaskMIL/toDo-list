@@ -86,7 +86,7 @@ function updateStatus(list, nodeID) {
 function editContent(list, nodeID, targ) {
   list.forEach(element => {
     if(element.index === parseInt(nodeID, 10)) {
-      element.description = targ.target.value;
+      element.description = targ.value;
     }
   })
 }
