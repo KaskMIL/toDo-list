@@ -91,6 +91,6 @@ function editContent(list, nodeID, targ) {
   })
 }
 
-//export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex, updateStatus, editContent};
+export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex, updateStatus, editContent};
 
-module.exports = {removeFromList, updateStatus, editContent};
+//module.exports = {removeFromList, updateStatus, editContent};

@@ -19,4 +19,6 @@ function clearList(list) {
   return newList;
 }
 
-module.exports = clearList;
+export { clearDom, clearList}
+
+//module.exports = clearList;
