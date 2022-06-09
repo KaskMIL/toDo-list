@@ -77,4 +77,4 @@ function updateElementId(elemClass) {
 
 export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex};
 
-module.exports = removeFromList;
+//module.exports = removeFromList;
