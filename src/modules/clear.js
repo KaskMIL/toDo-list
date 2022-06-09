@@ -1,5 +1,6 @@
+/* eslint-disable */
 // Function to clear DOM
-export function clearDom(list, elemClass) {
+function clearDom(list, elemClass) {
   const liList = document.querySelectorAll(`.${elemClass}`);
   list.forEach((task) => {
     if (task.completed) {
@@ -13,7 +14,11 @@ export function clearDom(list, elemClass) {
 }
 
 // Function to clear list
-export function clearList(list) {
+function clearList(list) {
   const newList = list.filter((element) => !element.completed);
   return newList;
 }
+
+export { clearDom, clearList}
+
+//module.exports = clearList;

@@ -19,10 +19,10 @@ describe('add function', () => {
 
 describe('remove function', () => {
   it('remove to list #3', () => {
-    expect(removeFromList(1, list)).toEqual([{ description: 'another', completed: false, index: 2 }]);
+    expect(removeFromList.removeFromList(1, list)).toEqual([{ description: 'another', completed: false, index: 2 }]);
   });
 
   it('remove to list #2', () => {
-    expect(removeFromList(2, list)).toEqual([{ description: 'something', completed: false, index: 1 }]);
+    expect(removeFromList.removeFromList(2, list)).toEqual([{ description: 'something', completed: false, index: 1 }]);
   });
 });

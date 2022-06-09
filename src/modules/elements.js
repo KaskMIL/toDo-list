@@ -75,6 +75,22 @@ function updateElementId(elemClass) {
   });
 }
 
-export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex};
+function updateStatus(list, nodeID) {
+  list.forEach(element => {
+    if(element.index === parseInt(nodeID, 10)) {
+      element.completed = !element.completed;
+    }
+  })
+}
 
-//module.exports = removeFromList;
+function editContent(list, nodeID, targ) {
+  list.forEach(element => {
+    if(element.index === parseInt(nodeID, 10)) {
+      element.description = targ.value;
+    }
+  })
+}
+
+export{getIndex, setElement, removeFromDom, removeFromList, updateElementId, updateIndex, updateStatus, editContent};
+
+//module.exports = {removeFromList, updateStatus, editContent};
