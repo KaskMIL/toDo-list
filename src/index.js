@@ -1,7 +1,7 @@
 import './styles/main.css';
 import Task from './modules/task.js';
 import {
-  setElement, getIndex, removeFromDom, removeFromList, updateIndex, updateElementId,
+  setElement, getIndex, removeFromDom, removeFromList, updateIndex, updateElementId, updateStatus, editContent
 } from './modules/elements.js';
 import { toDots, toTrash } from './modules/style.js';
 import { storeData, loadData } from './modules/localStorage.js';
@@ -28,12 +28,12 @@ listContainer.addEventListener('click', (e) => {
   if (e.target.nodeName === 'INPUT' && e.target.classList.contains('checkbox')) {
     if (e.target.checked) {
       e.target.nextSibling.classList.add('done');
-      toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = true;
+      updateStatus(toDoList, e.target.parentNode.parentNode.id)
       toTrash(e.target.parentNode.nextSibling);
       storeData(toDoList, storeName);
     } else {
       e.target.nextSibling.classList.remove('done');
-      toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].completed = false;
+      updateStatus(toDoList, e.target.parentNode.parentNode.id)
       toDots(e.target.parentNode.nextSibling);
       storeData(toDoList, storeName);
     }
@@ -46,7 +46,7 @@ listContainer.addEventListener('dblclick', (e) => {
     e.target.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        toDoList[parseInt(e.target.parentNode.parentNode.id, 10) - 1].description = e.target.value;
+        editContent(toDoList, e.target.parentNode.parentNode.id, e);
         storeData(toDoList, storeName);
       }
     });
